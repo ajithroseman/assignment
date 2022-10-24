@@ -6,9 +6,9 @@ function alternateSort(arr, n)
         return a - b;                    /* a - b is used to compare the value in array and make it accending order */
     });                                  /* if you need descending order use b - a */
     console.log(arr);                    /* prints output in ascending order */
-    var i = 0,
-    j = n - 1;
-    while(i<j)
+    var i = 0,                           /* assigning 0 to i */
+    j = n - 1;                           /* normal math the value of n is length of array subracting 1 and the result is stored in j */
+    while(i<j)                             /* below code will work only when the value of i is lessthan j */ 
     {
         console.log(arr[j--] + "");         /* prints output in  descending */
         console.log(arr[i++] + "");         /* prints output in ascending */
@@ -16,7 +16,7 @@ function alternateSort(arr, n)
                                             such a way you get first max first min second max second min third max third min and goes 
                                             on till all elements in array is exucuted */
     }
-    if (n % 2 != 0) console.log(arr[i]);   
+    if (n % 2 != 0) console.log(arr[i]);    /* i dont know what exactly is happening this is usually to find true or false */
 }
 var arr = [12, 74, 4, 27, 94, 21, 65, 17, 2];  /* assigning values in array */
 var n = arr.length;                            /* the value of n becomes how many elements are there inside array in this example its 9 and counts from 
