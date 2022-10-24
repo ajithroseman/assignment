@@ -1,20 +1,24 @@
 function alternateSort(arr, n)
 {
-    console.log(arr);
+    console.log(arr);                    /* prints output what we put value in var arr */
     arr.sort(function (a, b)
     {
-        return a - b;
-    });
-    console.log(arr);
+        return a - b;                    /* a - b is used to compare the value in array and make it accending order */
+    });                                  /* if you need descending order use b - a */
+    console.log(arr);                    /* prints output in ascending order */
     var i = 0,
     j = n - 1;
     while(i<j)
     {
-        document.write(arr[j--] + "");
-        document.write(arr[i++] + "");
+        console.log(arr[j--] + "");         /* prints output in  descending */
+        console.log(arr[i++] + "");         /* prints output in ascending */
+                                            /* above two statement helps to print output as alternate
+                                            such a way you get first max first min second max second min third max third min and goes 
+                                            on till all elements in array is exucuted */
     }
-    if (n % 2 != 0) document.write(arr[i]);
+    if (n % 2 != 0) console.log(arr[i]);   
 }
-var arr = [12, 74, 4, 27, 94, 21, 65, 17, 2];
-var n = arr.length;
-alternateSort(arr, n)
+var arr = [12, 74, 4, 27, 94, 21, 65, 17, 2];  /* assigning values in array */
+var n = arr.length;                            /* the value of n becomes how many elements are there inside array in this example its 9 and counts from 
+                                                 1 not from 0 unlike array */
+alternateSort(arr, n)                           /* we are calling the function */
